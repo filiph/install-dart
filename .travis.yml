@@ -1,7 +1,12 @@
 language: node_js
 
-before_install:
-  - curl -sSL https://raw.githubusercontent.com/filiph/install-dart/master/linux/travis.sh | bash
+addons:
+  apt:
+    sources:
+      - sourceline: 'deb [arch=amd64] https://storage.googleapis.com/download.dartlang.org/linux/debian stable main'
+        key_url: 'https://dl-ssl.google.com/linux/linux_signing_key.pub'
+    packages:
+      - dart
 
 before_script:
   - pub global activate linkcheck
