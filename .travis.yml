@@ -1,7 +1,7 @@
 language: node_js
 
 before_install:
-  - curl -sSL https://raw.githubusercontent.com/filiph/install-dart/master/linux/stable.sh | bash
+  - curl -sSL https://raw.githubusercontent.com/filiph/install-dart/master/linux/travis.sh | bash
 
 before_script:
   - pub global activate linkcheck
